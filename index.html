@@ -10,6 +10,34 @@
     <link rel="stylesheet" href="css/all.min.css" />
   </head>
   <body>
+    <!--  Begin Navigation -->
+    <nav class="nav-bar top-nav" id="top-nav-bar">
+      <h1 class="logo"><a href="/">Bellamy Davis</a></h1>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item social-nav-item">
+          <a
+            href="https://instagram.com/enbyroyalty_"
+            aria-label="link to instagram"
+            ><i class="fab fa-instagram" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li class="nav-item social-nav-item">
+          <a
+            href="https://twitter.com/enbyroyalty_"
+            aria-label="link to twitter"
+            ><i class="fab fa-twitter" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li class="nav-item social-nav-item">
+          <a href="https://enbyroyalty.carrd.co" aria-label="link to carrd"
+            ><i class="fab fa-carrd" aria-hidden="true"></i
+            ><img src="img/symbol-dark.svg" id="carrd-img" alt=""
+          /></a>
+        </li>
+      </ul>
+    </nav>
     <header class="hero-box">
       <section class="hero-image-box">
         <!-- <img
@@ -31,7 +59,7 @@
       </section>
     </header>
     <!-- Begin Portfolio Gallery -->
-    <section class="portfolio-container">
+    <section id="portfolio" class="portfolio-container section-scroll">
       <h1>Portfolio</h1>
       <section class="portfolio-gallery">
         <div class="gallery-item">
@@ -125,7 +153,7 @@
     </section>
     <!-- end .portfolio-container-->
     <!-- Begin About Section -->
-    <section class="about-container">
+    <section id="about" class="about-container section-scroll">
       <section class="about-text">
         <h1>Bellamy likes making cute and creepy art</h1>
         <p>
@@ -139,8 +167,8 @@
           tempore.
         </p>
         <p>
-          <a href="mailto:bdavis100402@gmail.com">Email Bellamy</a> at
-          bdavis100402@gmail.com
+          <a href="mailto:enbyroyalty.business@gmail.com">Email Bellamy</a> at
+          enbyroyalty.business@gmail.com
         </p>
         <section class="about-social">
           <a
@@ -155,9 +183,7 @@
           >
             <i class="fab fa-twitter" aria-hidden="true"></i>
           </a>
-          <a href="https://github.com/bellamyart" aria-label="Link to Github">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
+
           <a href="https://enbyroyalty.carrd.co" aria-label="Link to Carrd">
             <i class="fab fa-carrd" aria-hidden="true"
               ><img src="img/icon-light.png" alt=""
@@ -173,6 +199,26 @@
     <script src="js/glightbox.min.js"></script>
     <script type="text/javascript">
       const lightbox = GLightbox({ loop: true });
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("top-nav-bar").style.background = rgba(
+            0,
+            0,
+            0,
+            1
+          );
+        } else {
+          document.getElementById("top-nav-bar").style.background = "";
+        }
+      }
     </script>
   </body>
 </html>
