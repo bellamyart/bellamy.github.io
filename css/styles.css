@@ -119,6 +119,12 @@ img {
   height: 12rem;
 }
 
+.top-nav-carrd {
+  filter: invert(1);
+  height: 1rem;
+  width: auto;
+}
+
 @supports (position: sticky) {
   .top-nav {
     position: -webkit-sticky;
@@ -146,7 +152,7 @@ img {
   align-items: start;
   height: 100%;
   width: 100%;
-  margin-top: -8rem;
+  margin-top: -12rem;
 }
 
 .hero-image-box {
@@ -163,7 +169,7 @@ img {
   width: 100%;
   position: absolute;
   top: 0;
-  bottom: 0;
+  left: 0;
   background-color: rgba(145, 73, 40, 0.4);
 }
 
@@ -271,6 +277,16 @@ img {
   color: fuchsia;
 }
 
+.about-carrd {
+  height: 2rem;
+  width: auto;
+}
+
+.about-carrd:hover {
+  filter: invert(17%) sepia(76%) saturate(4068%) hue-rotate(293deg)
+    brightness(123%) contrast(130%);
+}
+
 .about-image img {
   height: 100%;
   object-fit: cover;
@@ -305,6 +321,9 @@ img {
   }
   .about-social a {
     font-size: 3rem;
+  }
+  .about-carrd {
+    height: 3rem;
   }
   .nav-bar {
     line-height: 1.5rem;
@@ -352,8 +371,11 @@ img {
   .about-social a {
     font-size: 4rem;
   }
+  .about-carrd {
+    height: 4rem;
+  }
   .nav-bar {
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem 2rem;
     line-height: 1rem;
   }
@@ -363,5 +385,21 @@ img {
   }
   .top-nav {
     width: 100%;
+  }
+  .nav-item {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .logo a {
+    font-size: 3rem;
+  }
+  .top-nav-carrd {
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-bar {
+    justify-content: space-between;
   }
 }
